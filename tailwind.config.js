@@ -1,8 +1,10 @@
-import defaultTheme from 'tailwindcss/defaultTheme';
+const defaultTheme = 'tailwindcss/defaultTheme';
 
 /** @type {import('tailwindcss').Config} */
-export default {
+module.export = {
     content: [
+        "./src/**/*.{html,js,jsx,ts,tsx}",
+        './index.html',
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
         './resources/**/*.blade.php',
@@ -10,11 +12,7 @@ export default {
         './resources/**/*.vue',
     ],
     theme: {
-        extend: {
-            fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-            },
-        },
+        extend: {},
     },
     plugins: [],
 };
